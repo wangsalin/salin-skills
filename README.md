@@ -1,15 +1,92 @@
 # Salin Skills
 
-Claude Code / Claude skills 制作仓库。约定：每个 skill 一个独立文件夹，名字包含 `salin`。
+> 面向同城实体门店的 Claude Skills 合集 · 每个 skill 独立文件夹，开箱即用
 
-## 已完成的 Skills
+![Claude Skill](https://img.shields.io/badge/Claude-Skill-d97706) ![Language](https://img.shields.io/badge/%E4%B8%AD%E6%96%87-zh--CN-blue) ![Version](https://img.shields.io/badge/salin--shortvideo--marketing-v2-success)
 
-### salin-shortvideo-marketing — 同城门店短视频营销
+---
 
-帮同城实体门店（餐饮、美业、健身、教培、零售等）做短视频获客：文案/脚本/分镜、钩子库（8 类话术 + 90 条模板）、选题与爆款元素诊断（含薛辉八大爆款元素门店改造版）、拍摄剪辑指导、BGM 配乐库、抖音同城运营（POI/团购/投流/数据诊断）、竞品拆解、门店档案机制。
+## salin-shortvideo-marketing · 同城门店短视频营销
 
-**安装方式：**
-- Claude 应用：下载 [salin-shortvideo-marketing.skill](salin-shortvideo-marketing.skill)，在 Claude 里打开该文件，点 **Save skill**
-- Claude Code：把 `salin-shortvideo-marketing/` 文件夹复制到 `~/.claude/skills/`
+给餐饮、美业、健身、教培、零售等实体门店老板用的短视频获客助手。核心理念：**门店视频不追求泛流量，追求"同城的目标客人看到 → 有到店理由 → 能找到店"**——一条 5000 播放但全是本地人的视频，比 50 万播放的外地泛流量值钱。
 
-**版本**：v2（两轮评测：v2 24/24 通过 vs v1 22/24，新增爆款元素诊断模块）
+把"拍什么 → 怎么写 → 怎么拍 → 怎么发 → 怎么转化"整条链路装进 Claude。
+
+### ✨ 能做什么
+
+| 模块 | 能力 |
+|---|---|
+| 📝 完整脚本 | 15-90 秒分镜脚本表（镜号/景别/运镜/画面/台词/字幕）＋口播稿（语速字数校准）＋备选钩子＋可归因 CTA＋发布建议 |
+| 🎣 钩子库 | 8 类开头话术＋约 90 条填空式模板钩子＋门店改写四步法＋钩子分析框架 |
+| 💡 选题系统 | 八大爆款元素诊断（成本/人群/猎奇/反差/头牌/怀旧/荷尔蒙/自曝）＋选题四象限＋月度排期（本地节点日历） |
+| 🔍 竞品拆解 | 爆款视频七步拆解（钩子/结构/视觉/台词/转化/元素/可复制要素） |
+| 🎬 拍摄剪辑 | 景别运镜、手机参数（升格帧率/对焦锁定）、布光光位、三套镜头组合公式、剪映实操 |
+| 🎵 配乐配音 | 六类场景 BGM 曲库＋音量规范＋7 种 AI 配音用法＋音乐分析框架 |
+| 📈 同城运营 | POI 机制、流量池层级、发布时间表、团购定价三件套、投流预算节奏、数据诊断、违规红线 |
+| 📇 门店档案 | 首次使用自动建档（store-profile.md），之后所有任务免重复介绍门店背景 |
+
+### 💬 使用示例
+
+直接用大白话提需求，skill 会自动触发：
+
+```text
+「我开火锅店的，帮我写条 30 秒引流视频脚本」   → 能直接照着拍的完整分镜方案
+「这句开头怎么样：再不来你就亏大了」            → 钩子类型判定 + 生效机制 + 本地化改写
+「我想拍后厨备菜过程，能火吗？」                → 八大爆款元素逐项诊断 + 强化改法
+「新号 0 粉怎么起？前两周发什么？」             → 账号定位 + 14 天排期 + 数据判断标准
+「帮我拆解一下这个对标账号」                    → 七步拆解 + 可复制要素清单
+```
+
+### 📦 安装
+
+**方式一 · Claude 桌面版 / 网页版**：下载 [salin-shortvideo-marketing.skill](salin-shortvideo-marketing.skill)，在 Claude 对话中打开该文件，点 **Save skill**。
+
+**方式二 · Claude Code**：
+
+```bash
+git clone https://github.com/wangsalin/salin-skills.git
+cp -r salin-skills/salin-shortvideo-marketing ~/.claude/skills/
+```
+
+新会话自动生效（Windows 目录为 `C:\Users\<你>\.claude\skills\`）。
+
+### 📁 结构
+
+```text
+salin-shortvideo-marketing/
+├── SKILL.md                        # 工作流：任务路由 → 门店档案 → 规范输出 → 双自检
+├── evals/evals.json                # 4 个评测用例（判别性断言）
+└── references/
+    ├── hooks.md                    # 钩子库与钩子方法
+    ├── topic-framework.md          # 选题与爆款元素
+    ├── script-writing.md           # 脚本与文案方法论
+    ├── shooting.md                 # 拍摄与剪辑实操
+    ├── bgm-voiceover.md            # BGM 配乐与配音
+    └── local-operation.md          # 抖音同城运营知识库
+```
+
+### ✅ 质量验证
+
+本 skill 经过两轮"带 skill vs 基线"对照评测（每轮由独立评分代理按断言逐条判定）：
+
+| 轮次 | 对照 | 结果 |
+|---|---|---|
+| 第一轮 | v1 vs 无 skill 基线 | 17/17 断言双通过；带 skill 版在配乐具体度、可归因 CTA、分析速度（2.3×）上显著更优 |
+| 第二轮 | v2 vs v1 | **v2：24/24（100%）**，v1：22/24（90%）——差距来自 v2 新增的爆款元素诊断模块 |
+
+### 📌 说明
+
+- 「八大爆款元素」整理自薛辉（红人星球）公开课程目录与网络转述资料，本 skill 做了门店场景改造与合规注记；原课程第 8 条元素公开资料无法确认，已如实标注存疑。
+- 平台数据类数字（完播率基准、发布时间段等）为 2024-2026 年行业经验值，使用时以自己账号后台实际数据校准。
+- BGM 曲目均可在抖音音乐库搜到，发布前请自行确认商用授权状态。
+- 内容公开供学习交流；商用或二次分发请先开 issue 联系。
+
+### 🗺️ Roadmap
+
+- [ ] 更多 Salin 系列 skills（本仓库持续更新）
+- [ ] salin-shortvideo-marketing：快手/视频号/小红书运营差异深化
+- [ ] 触发词（description）自动化优化
+
+---
+
+*Made with Claude Code · 两轮评测流水线（skill-creator）驱动迭代*
