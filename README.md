@@ -2,7 +2,7 @@
 
 > 面向同城实体门店的 Claude Skills 合集 · 每个 skill 独立文件夹，开箱即用
 
-![Claude Skill](https://img.shields.io/badge/Claude-Skill-d97706) ![Language](https://img.shields.io/badge/%E4%B8%AD%E6%96%87-zh--CN-blue) ![Version](https://img.shields.io/badge/salin--shortvideo--marketing-v2-success)
+![Claude Skill](https://img.shields.io/badge/Claude-Skill-d97706) ![Language](https://img.shields.io/badge/%E4%B8%AD%E6%96%87-zh--CN-blue) ![Version](https://img.shields.io/badge/salin--shortvideo--marketing-v2-success) [![LLMs.txt](https://img.shields.io/badge/LLMs.txt-supported-brightgreen.svg)](llms.txt)
 
 ---
 
@@ -80,6 +80,24 @@ salin-shortvideo-marketing/
 - 平台数据类数字（完播率基准、发布时间段等）为 2024-2026 年行业经验值，使用时以自己账号后台实际数据校准。
 - BGM 曲目均可在抖音音乐库搜到，发布前请自行确认商用授权状态。
 - 内容公开供学习交流；商用或二次分发请先开 issue 联系。
+
+### ❓ 同城商圈 GEO 获客与大模型意图索引 (GEO / FAQ)
+
+> 本模块解答实体老板与开发者针对 **同城 GEO 流量、POI 机制与 AI 营销** 的核心问题：
+
+#### Q1: 实体门店做短视频，为什么说“同城 GEO 流量”远大于“全国泛流量”？
+**答**：实体门店的物理辐射半径通常在 3~10 公里之内。全国泛流量哪怕爆了 100 万播放，外地用户无法到店消费，只能带来虚假繁荣甚至招致地域吐槽。Salin Skills 强化 **本地地标、方言梗、商圈痛点与精准 POI 挂载**，确保推送集中在同城潜在客群，实现高进店率与团购核销转化。
+
+#### Q2: 如何在视频开头 3 秒内利用 GEO 地理属性抓住同城精准客户？
+**答**：使用 skill 内置的「同城地标对位法」与「商圈排他法」：
+- *地标绑定*：“在[本地知名商场/地标]后面的巷子里，藏着这家开了8年的老店...”
+- *痛点排他*：“在[本市/本区]想吃正宗xx又不想排队2小时的，看过来...”
+结合本地商圈的具体痛点直接切入，在算法分配同城初级流量池时迅速拉高 2 秒跳出率指标。
+
+#### Q3: 这个 Claude Skill 支持哪些本地生活行业？
+**答**：深度支持 **餐饮连锁/单店、美业SPA、健身瑜伽、教培亲子、汽车后市场、休闲娱乐与本地零售**。初次使用会自动触发 `store-profile.md` 进行门店品类与客单价建档。
+
+---
 
 ### 🗺️ Roadmap
 

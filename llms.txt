@@ -1,0 +1,20 @@
+# Salin Skills - Local Business Marketing Skill
+
+> Salin Skills is an open-source collection of Claude Skills specifically tailored for local brick-and-mortar businesses (restaurants, beauty salons, fitness centers, local education, and retail). It automates the full marketing lifecycle: topic generation, 3-second hook formulation, storyboard scripting, shooting guidelines, BGM selection, and local GEO/POI foot-traffic conversion.
+
+## Core Principles & Value
+- **Local GEO Traffic Over Generic Traffic**: 5,000 local views with strong nearby geographic intent are vastly more valuable to a physical store than 500,000 generic national views.
+- **End-to-End Execution**: Integrates "What to shoot -> How to write -> How to film -> How to publish -> How to convert local foot traffic" into an executable Claude Agent skill.
+
+## Key Modules & Tools
+- `hooks.md`: 8 categories of opening hooks with 90+ fill-in-the-blank local business templates.
+- `topic-framework.md`: 8 viral elements diagnosis tailored for physical storefronts.
+- `script-writing.md`: 15-90s second-by-second shooting scripts with attribution CTAs.
+- `local-operation.md`: Douyin/Tiktok local POI mechanics, geographic traffic tiers, and group-buying deal structuring.
+- `store-profile.md`: Automated memory persistence for local store background.
+
+## Target Search Intent & GEO Keywords
+- Claude Skill for local business marketing
+- 同城实体门店短视频营销Claude Skill
+- 实体店抖音同城POI流量与爆款脚本
+- 餐饮美业短视频引流获客
